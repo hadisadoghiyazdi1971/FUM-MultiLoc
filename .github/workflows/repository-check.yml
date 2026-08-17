@@ -1,0 +1,28 @@
+name: Repository check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        shell: bash
+        run: |
+          test -f README.md
+          test -f docs/BENCHMARK_PROTOCOL.md
+          test -f docs/COORDINATE_SYSTEM.md
+          test -f schemas/sample.schema.json
+          test -f metadata/sessions.csv
+      - name: Validate JSON schemas are parseable
+        run: |
+          python - <<'PY'
+          import json, glob
+          for p in glob.glob('schemas/*.json'):
+              with open(p, encoding='utf-8') as f:
+                  json.load(f)
+              print('OK', p)
+          PY

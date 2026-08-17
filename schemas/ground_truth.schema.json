@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FUM-MultiLoc ground truth",
+  "type": "object",
+  "required": ["timestamp_ns", "x_m", "y_m"],
+  "properties": {
+    "trajectory_id": {"type": ["string", "null"]},
+    "reference_point_id": {"type": ["string", "null"]},
+    "timestamp_ns": {"type": "integer"},
+    "building_id": {"type": ["string", "null"]},
+    "floor_id": {"type": ["string", "null"]},
+    "x_m": {"type": "number"},
+    "y_m": {"type": "number"},
+    "z_m": {"type": ["number", "null"]},
+    "heading_deg": {"type": ["number", "null"]},
+    "uncertainty_m": {"type": ["number", "null"]},
+    "truth_method": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

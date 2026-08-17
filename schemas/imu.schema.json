@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FUM-MultiLoc IMU sample",
+  "type": "object",
+  "required": ["imu_ref", "session_id", "timestamp_ns"],
+  "properties": {
+    "imu_ref": {"type": "string"},
+    "session_id": {"type": "string"},
+    "timestamp_ns": {"type": "integer"},
+    "acc_x_mps2": {"type": ["number", "null"]},
+    "acc_y_mps2": {"type": ["number", "null"]},
+    "acc_z_mps2": {"type": ["number", "null"]},
+    "gyro_x_rps": {"type": ["number", "null"]},
+    "gyro_y_rps": {"type": ["number", "null"]},
+    "gyro_z_rps": {"type": ["number", "null"]},
+    "mag_x_ut": {"type": ["number", "null"]},
+    "mag_y_ut": {"type": ["number", "null"]},
+    "mag_z_ut": {"type": ["number", "null"]}
+  },
+  "additionalProperties": true
+}

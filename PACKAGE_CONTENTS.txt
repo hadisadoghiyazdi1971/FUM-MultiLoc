@@ -1,0 +1,11 @@
+FUM-MultiLoc GitHub-ready skeleton v0.1.0
+Generated: 2026-08-17
+Purpose: extract directly into the root of the local FUM-MultiLoc Git repository.
+No research data are included.
+
+After extraction:
+1. Review README.md and LICENSE.
+2. Run `git status`.
+3. Run `git add .`.
+4. Run `git status` again and verify that no raw/private/large data are staged.
+5. Commit and push.

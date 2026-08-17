@@ -1,0 +1,115 @@
+# FUM-MultiLoc: keep Git for code/specifications, not raw benchmark blobs.
+
+# OS/editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Logs / temporary
+*.log
+*.tmp
+*.temp
+*.bak
+~$*
+
+# Secrets/local config
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.*
+secrets.*
+
+# Large archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.tgz
+*.tar.gz
+*.tar.zst
+*.zst
+*.gz
+*.bz2
+*.xz
+
+# Common large data containers
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.mat
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.db
+*.sqlite
+*.sqlite3
+
+# Raw images/video/audio: public README assets can be force-added deliberately.
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.heic
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+*.wav
+*.m4a
+
+# Potential raw GNSS/radio/sensor exports
+*.pcap
+*.pcapng
+*.bag
+*.mcap
+
+# Explicit raw/local data folders anywhere
+**/raw/
+**/raw_data/
+**/private/
+**/restricted/
+**/unredacted/
+**/downloads/
+**/cache/
+**/tmp/
+
+# Future release blobs should live outside Git
+releases/*.zip
+releases/*.tar*
+releases/*.zst
+
+# Keep directory documentation files
+!assets/README.md
+!maps/README.md
+!wifi/README.md
+!imu/README.md
+!vision/README.md
+!cellular/README.md

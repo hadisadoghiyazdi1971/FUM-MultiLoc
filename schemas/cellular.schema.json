@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FUM-MultiLoc cellular observation",
+  "type": "object",
+  "required": ["cellular_ref", "session_id", "timestamp_ns"],
+  "properties": {
+    "cellular_ref": {"type": "string"},
+    "session_id": {"type": "string"},
+    "timestamp_ns": {"type": "integer"},
+    "cell_id_public": {"type": ["string", "null"], "description": "Public/pseudonymous cell identifier if released"},
+    "radio_type": {"type": ["string", "null"]},
+    "frequency_mhz": {"type": ["number", "null"]},
+    "rsrp_dbm": {"type": ["number", "null"]},
+    "rsrq_db": {"type": ["number", "null"]},
+    "sinr_db": {"type": ["number", "null"]}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FUM-MultiLoc master sample",
+  "type": "object",
+  "required": ["sample_id", "session_id", "timestamp_ns"],
+  "properties": {
+    "sample_id": {"type": "string"},
+    "session_id": {"type": "string"},
+    "timestamp_ns": {"type": "integer"},
+    "building_id": {"type": ["string", "null"]},
+    "floor_id": {"type": ["string", "null"]},
+    "zone_id": {"type": ["string", "null"]},
+    "room_id": {"type": ["string", "null"]},
+    "x_m": {"type": ["number", "null"]},
+    "y_m": {"type": ["number", "null"]},
+    "z_m": {"type": ["number", "null"]},
+    "heading_deg": {"type": ["number", "null"]},
+    "wifi_ref": {"type": ["string", "null"]},
+    "imu_ref": {"type": ["string", "null"]},
+    "vision_ref": {"type": ["string", "null"]},
+    "cellular_ref": {"type": ["string", "null"]},
+    "split": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

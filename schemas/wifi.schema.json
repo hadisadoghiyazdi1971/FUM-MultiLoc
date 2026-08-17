@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FUM-MultiLoc Wi-Fi observation",
+  "type": "object",
+  "required": ["wifi_ref", "session_id", "timestamp_ns"],
+  "properties": {
+    "wifi_ref": {"type": "string"},
+    "session_id": {"type": "string"},
+    "timestamp_ns": {"type": "integer"},
+    "ap_id": {"type": ["string", "null"], "description": "Stable public/pseudonymous AP identifier"},
+    "rssi_dbm": {"type": ["number", "null"]},
+    "frequency_mhz": {"type": ["number", "null"]},
+    "channel": {"type": ["integer", "null"]}
+  },
+  "additionalProperties": true
+}
